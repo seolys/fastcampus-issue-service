@@ -1,10 +1,8 @@
 package seol.issueservice.web
 
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import seol.issueservice.config.AuthUser
+import seol.issueservice.domain.enums.IssueStatus
 import seol.issueservice.model.IssueRequest
 import seol.issueservice.model.IssueResponse
 import seol.issueservice.service.IssueService
@@ -22,5 +20,11 @@ class IssueController(
     ): IssueResponse {
         return issueService.create(authUser.userId, request)
     }
+
+    @GetMapping
+    fun getAll(
+        authUser: AuthUser,
+        @RequestParam(required = false, defaultValue = "TODO") status: IssueStatus,
+    ) = issueService.getAll(status)
 
 }

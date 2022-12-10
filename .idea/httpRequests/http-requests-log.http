@@ -1,0 +1,118 @@
+GET http://localhost:8080/api/v1/issues?status=IN_PROGRESS
+
+<> 2022-12-10T214442.200.json
+
+###
+
+GET http://localhost:8080/api/v1/issues?status=IN_PROGRESS
+
+<> 2022-12-10T214439.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "BUG",
+  "priority": "HIGH",
+  "status": "IN_PROGRESS"
+}
+
+<> 2022-12-10T214437.200.json
+
+###
+
+GET http://localhost:8080/api/v1/issues?status=TODO
+
+<> 2022-12-10T214346.200.json
+
+###
+
+GET http://localhost:8080/api/v1/issues
+
+<> 2022-12-10T214323.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+
+<> 2022-12-10T214302.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "BUG",
+  "priority": "HIGH",
+  "status": "TODO"
+}
+
+<> 2022-12-10T214300.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2022-12-10T214246.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2022-12-10T161007.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2022-12-10T161005.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+###
+
