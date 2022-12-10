@@ -1,5 +1,6 @@
 package seol.issueservice.web
 
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import seol.issueservice.config.AuthUser
 import seol.issueservice.domain.enums.IssueStatus
@@ -39,5 +40,15 @@ class IssueController(
         @PathVariable id: Long,
         @RequestBody request: IssueRequest
     ) = issueService.edit(authUser.userId, id, request)
+
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun delete(
+        authUser: AuthUser,
+        @PathVariable id: Long
+    ) {
+        issueService.delete(id)
+    }
 
 }
