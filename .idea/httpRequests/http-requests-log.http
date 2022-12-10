@@ -1,3 +1,30 @@
+GET http://localhost:8080/api/v1/issues/9999
+
+<> 2022-12-10T215509.200.json
+
+###
+
+GET http://localhost:8080/api/v1/issues/1
+
+<> 2022-12-10T215503.200.json
+
+###
+
+POST http://localhost:8080/api/v1/issues
+Content-Type: application/json
+
+{
+  "summary": "테스트",
+  "description": "테스트 내용",
+  "type": "TASK",
+  "priority": "LOW",
+  "status": "TODO"
+}
+
+<> 2022-12-10T215441.200.json
+
+###
+
 GET http://localhost:8080/api/v1/issues?status=IN_PROGRESS
 
 <> 2022-12-10T214442.200.json
