@@ -1,5 +1,6 @@
 package seol.issueservice.web
 
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import seol.issueservice.config.AuthUser
 import seol.issueservice.model.CommentRequest
@@ -28,4 +29,13 @@ class CommentController(
         @RequestBody request: CommentRequest
     ) = commentService.edit(id, authUser.userId, request)
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun delete(
+        authUser: AuthUser,
+        @PathVariable issueId: Long,
+        @PathVariable id: Long
+    ) {
+        commentService.delete(issueId, id, authUser.userId)
+    }
 }
